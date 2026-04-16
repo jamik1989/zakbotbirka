@@ -1,0 +1,7 @@
+﻿Stable backup created: D:\My Project\zakariyyo-railway\_backup_stable_2026_04_15_0955
+Fast backup done
+Created: stable_time_fix.py
+Created: stable_receipt_fix.py
+Patched: D:\My Project\zakariyyo-railway\stable_receipt_fix.py
+Patched: D:\My Project\zakariyyo-railway\app\services\moysklad.py
+Created: _STABLE_FIX_README.txt

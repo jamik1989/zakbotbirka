@@ -1,0 +1,51 @@
+﻿
+app\config.py:26:# /tasdiq modul kanali
+app\config.py:32:# /tasdiq modulidan tushadigan buyurtmalar uchun sklad nomi
+app\config.py:33:TASDIQ_STORE_NAME = os.getenv("TASDIQ_STORE_NAME", "Abusahiy 75").strip()
+app\keyboards.py:7:        [[KeyboardButton("/kiritish"), KeyboardButton("/tasdiq")]],
+app\main.py:54:    tasdiq_start,
+app\main.py:211:        entry_points=[CommandHandler("tasdiq", tasdiq_start)],
+app\handlers\admin.py:149:        "Operator botga kirib /login qiladi. Keyin faqat /kiritish va /tasdiq ishlaydi."
+app\handlers\auth.py:46:            keyboard=[[KeyboardButton("/tasdiq"), KeyboardButton("/takror")]],
+app\handlers\auth.py:172:        welcome = f"✅ Xush kelibsiz, {context.user_data['operator']['name']}!\nKerakli bo‘limlarni t
+anlang: /tasdiq yoki /takror."
+app\handlers\confirm.py:92:        keyboard=[[KeyboardButton("/tasdiq"), KeyboardButton("/takror")]],
+app\handlers\confirm.py:101:        [InlineKeyboardButton("✅ Tasdiqlash (MoySklad + Kanal)", callback_data="cfr:send")],
+app\handlers\confirm.py:103:        [InlineKeyboardButton("🕒 Vaqtni tahrirlash", callback_data="cfr:time")],
+app\handlers\confirm.py:104:        [InlineKeyboardButton("✏️ Tahrirlash", callback_data="cfr:edit")],
+app\handlers\confirm.py:345:        "🔎 Tekshiruv (Tasdiqlash):\n\n"
+app\handlers\confirm.py:356:        f"🕒 Vaqt: {moment_show}\n"
+app\handlers\confirm.py:358:        "Davom etamizmi?"
+app\handlers\confirm.py:503:async def tasdiq_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+app\handlers\confirm.py:525:        "✅ Tasdiqlash: qaysi buyurtmani yuboramiz?\n\n"
+app\handlers\confirm.py:526:        "Yangi tasdiq uchun bitta tugma orqali qidiring yoki format yuboring.",
+app\handlers\confirm.py:598:            f"✅ Yangi tasdiq yaratildi: *{brand}*\n\n🖼 Buyurtma rasmini yuboring (Photo yoki Fil
+e).",
+app\handlers\confirm.py:650:        "— Agar ✅ OPEN tasdiq chiqsa, o‘shani tanlang.\n"
+app\handlers\confirm.py:740:            await update.message.reply_text("❌ Kontragent meta yo‘q. Qaytadan /tasdiq qiling.")
+app\handlers\confirm.py:957:        await q.edit_message_text("❌ Kanal topilmadi. Qaytadan /tasdiq qiling.")
+app\handlers\confirm.py:1006:        await q.edit_message_text("❌ Группа topilmadi. Qaytadan /tasdiq qiling.")
+app\handlers\confirm.py:1085:        "???? Tekshiruv (Tasdiqlash):",
+app\handlers\confirm.py:1108:        await q.edit_message_text("⬅️ Orqaga qayting: /tasdiq ni bosing.")
+app\handlers\confirm.py:1205:                f"[BOT TASDIQLASH] B: {brand} | Operator: {op.get('name')} | Store: {CONFIRM_STO
+RE_NAME}",
+app\handlers\confirm.py:1502:    if "#tasdiq" not in low_first and "#takror" not in low_first:
+app\handlers\confirm.py:1505:    tag = "tasdiq" if "#tasdiq" in low_first else "takror"
+app\handlers\confirm.py:1506:    brand = re.sub(r"(?i)#tasdiq|#takror", "", first).strip().upper()
+app\handlers\confirm.py:1637:        [InlineKeyboardButton("✅ Tasdiqlash", callback_data="fwdc:send")],
+app\handlers\confirm.py:1850:        tag = (d.get("tag") or "tasdiq").strip()
+app\handlers\confirm.py:1945:                f"🕒 Vaqt: {moment_show}",
+app\handlers\order.py:59:        [InlineKeyboardButton("✅ Tasdiq", callback_data="rv:confirm")],
+app\handlers\order.py:60:        [InlineKeyboardButton("✏️ Tahrirlash", callback_data="rv:edit")],
+app\handlers\order.py:258:        "🧾 *Kiritish — 7/7*\n"
+app\handlers\order.py:260:        "✅ *Tekshiruv kartochkasi*\n\n"
+app\handlers\order.py:267:        "Davom etamizmi?"
+app\handlers\order.py:672:            f"Agar noto‘g‘ri bo‘lsa, keyin *Tahrirlash* orqali o‘zgartirishingiz mumkin.",
+app\handlers\start.py:37:            keyboard=[[KeyboardButton("/tasdiq"), KeyboardButton("/takror")]],
+app\handlers\start.py:74:            text = "✅ Xush kelibsiz. Kerakli bo‘limlarni tanlang: /tasdiq yoki /takror."
+app\handlers\takror.py:36:        keyboard=[[KeyboardButton("/tasdiq"), KeyboardButton("/takror")]],
+app\handlers\takror.py:90:        [InlineKeyboardButton("??? Tasdiqlash", callback_data="tkr:ok")],
+app\handlers\takror.py:91:        [InlineKeyboardButton("?????? Tahrirlash", callback_data="tkr:edit")],
+app\handlers\takror.py:215:            "Avval /tasdiq orqali mijozni tanlab oling, keyin /takror ishlating.",
+
+
